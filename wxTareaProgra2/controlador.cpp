@@ -9,6 +9,15 @@ Controlador::Controlador(wxPolinomioFrmApp* a) {
     ventana = new wxPolinomioFrm(NULL);
     a->SetTopWindow(ventana);
     ventana->Show();
+    
+    void setSumaPolinomios(Polinomio pA,Polinomio pB){
+        
+        }
+        
+    string getSumaPolinomios(){
+        return " ";
+        }
+
 }
 
 
@@ -56,6 +65,7 @@ Controlador::Controlador(wxPolinomioFrmApp* a) {
             break;
             }//cierre switch
         }//cierre while
+>>>>>>> 7fe435a6f516765514480302150ba8478307dae0
         
         
         

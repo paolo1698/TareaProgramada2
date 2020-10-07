@@ -22,9 +22,11 @@
 #include <wx/textctrl.h>
 #include <wx/stattext.h>
 #include <wx/button.h>
+////Header Include End
 #include <wx/richtext/richtextctrl.h>
 #include <wx/stc/stc.h>
-////Header Include End
+
+
 
 ////Dialog Style Start
 #undef wxPolinomioFrm_STYLE
@@ -61,6 +63,15 @@ class wxPolinomioFrm : public wxFrame
 		//GUI Control Declaration Start and GUI Control Declaration End.
 		//wxDev-C++ will remove them. Add custom code after the block.
 		////GUI Control Declaration Start
+		wxButton *btnDerivar02;
+		wxButton *btnGraficar;
+		wxButton *btnGradoP1;
+		wxButton *btnGradoP2;
+		wxButton *btnBorrar;
+		wxButton *btnMultiplica;
+		wxButton *btnSuma;
+		wxButton *btnDerivar01;
+		wxButton *btnResta;
 		wxStaticText *lblPolinomio2;
 		wxTextCtrl *txtExponente2;
 		wxButton *btnAgregar2;
@@ -81,6 +92,15 @@ class wxPolinomioFrm : public wxFrame
 		enum
 		{
 			////GUI Enum Control ID Start
+			ID_BTNDERIVAR02 = 1027,
+			ID_BTNGRAFICAR = 1026,
+			ID_BTNGRADOP1 = 1025,
+			ID_BTNGRADOP2 = 1024,
+			ID_BTNBORRAR = 1023,
+			ID_BTNMULTIPLICA = 1022,
+			ID_BTNSUMA = 1021,
+			ID_BTNDERIVAR01 = 1020,
+			ID_BTNRESTA = 1019,
 			ID_LBLPOLINOMIO2 = 1018,
 			ID_TXTEXPONENTE2 = 1017,
 			ID_BTNAGREGAR2 = 1016,
