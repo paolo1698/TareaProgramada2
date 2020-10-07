@@ -10,7 +10,11 @@ Controlador::Controlador(wxPolinomioFrmApp* a) {
     a->SetTopWindow(ventana);
     ventana->Show();
     
-    string sumarPolinomios(){
+    void setSumaPolinomios(Polinomio pA,Polinomio pB){
+        
+        }
+        
+    string getSumaPolinomios(){
         return " ";
         }
         

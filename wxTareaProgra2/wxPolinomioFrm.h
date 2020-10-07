@@ -22,8 +22,6 @@
 #include <wx/textctrl.h>
 #include <wx/stattext.h>
 #include <wx/button.h>
-#include <wx/richtext/richtextctrl.h>
-#include <wx/stc/stc.h>
 ////Header Include End
 
 ////Dialog Style Start
@@ -31,14 +29,14 @@
 #define wxPolinomioFrm_STYLE wxCAPTION | wxRESIZE_BORDER | wxSYSTEM_MENU | wxMINIMIZE_BOX | wxMAXIMIZE_BOX | wxCLOSE_BOX
 ////Dialog Style End
 
-class wxPolinomioFrm : public wxFrame
+class btnFradoP1 : public wxFrame
 {
 	private:
 		DECLARE_EVENT_TABLE();
 		
 	public:
 		wxPolinomioFrm(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("wxPolinomio"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxPolinomioFrm_STYLE);
-		virtual ~wxPolinomioFrm();
+		virtual ~btnFradoP1();
 		void WxButton1Click(wxCommandEvent& event);
 		void WxEdit1Updated(wxCommandEvent& event);
 		void btnAgregarClick1(wxCommandEvent& event);
@@ -61,6 +59,15 @@ class wxPolinomioFrm : public wxFrame
 		//GUI Control Declaration Start and GUI Control Declaration End.
 		//wxDev-C++ will remove them. Add custom code after the block.
 		////GUI Control Declaration Start
+		wxButton *btnDerivar02;
+		wxButton *btnGraficar;
+		wxButton *btnGradoP1;
+		wxButton *btnGradoP2;
+		wxButton *btnBorrar;
+		wxButton *btnMultiplica;
+		wxButton *btnSuma;
+		wxButton *btnDerivar01;
+		wxButton *btnResta;
 		wxStaticText *lblPolinomio2;
 		wxTextCtrl *txtExponente2;
 		wxButton *btnAgregar2;
@@ -81,6 +88,15 @@ class wxPolinomioFrm : public wxFrame
 		enum
 		{
 			////GUI Enum Control ID Start
+			ID_BTNDERIVAR02 = 1027,
+			ID_BTNGRAFICAR = 1026,
+			ID_BTNGRADOP1 = 1025,
+			ID_BTNGRADOP2 = 1024,
+			ID_BTNBORRAR = 1023,
+			ID_BTNMULTIPLICA = 1022,
+			ID_BTNSUMA = 1021,
+			ID_BTNDERIVAR01 = 1020,
+			ID_BTNRESTA = 1019,
 			ID_LBLPOLINOMIO2 = 1018,
 			ID_TXTEXPONENTE2 = 1017,
 			ID_BTNAGREGAR2 = 1016,
