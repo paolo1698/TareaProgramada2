@@ -88,5 +88,3 @@ Controlador::Controlador(wxPolinomioFrmApp* a) {
     int evaluarLaFuncion(){
         return 1;
     }
-
-}
