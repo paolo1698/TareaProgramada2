@@ -23,32 +23,31 @@
 //Add Custom Events only in the appropriate block.
 //Code added in other places will be removed by wxDev-C++
 ////Event Table Start
-BEGIN_EVENT_TABLE(wxPolinomioFrm,wxFrame)
+BEGIN_EVENT_TABLE(btnGradoP1,wxFrame)
 	////Manual Code Start
 	////Manual Code End
 	
-	EVT_CLOSE(wxPolinomioFrm::OnClose)
-	EVT_ACTIVATE(wxPolinomioFrm::wxPolinomioFrmActivate)
+	EVT_CLOSE(btnGradoP1::OnClose)
+	EVT_ACTIVATE(btnGradoP1::wxPolinomioFrmActivate)
+	EVT_BUTTON(ID_BTNDERIVAR02,btnGradoP1::btnAgregarClick)
+	EVT_BUTTON(ID_BTNGRAFICAR,btnGradoP1::btnAgregarClick)
+	EVT_BUTTON(ID_BTNGRADOP1,btnGradoP1::btnAgregarClick)
+	EVT_BUTTON(ID_BTNGRADOP2,btnGradoP1::btnAgregarClick)
+	EVT_BUTTON(ID_BTNBORRAR,btnGradoP1::btnAgregarClick)
+	EVT_BUTTON(ID_BTNMULTIPLICA,btnGradoP1::btnAgregarClick)
+	EVT_BUTTON(ID_BTNSUMA,btnGradoP1::btnAgregarClick)
+	EVT_BUTTON(ID_BTNDERIVAR01,btnGradoP1::btnAgregarClick)
+	EVT_BUTTON(ID_BTNRESTA,btnGradoP1::btnAgregarClick)
 	
-	EVT_TEXT(ID_TXTEXPONENTE2,wxPolinomioFrm::txtExponenteUpdated)
-	EVT_BUTTON(ID_BTNAGREGAR2,wxPolinomioFrm::btnAgregarClick2)
+	EVT_TEXT(ID_TXTEXPONENTE2,btnGradoP1::txtExponenteUpdated)
+	EVT_BUTTON(ID_BTNAGREGAR2,btnGradoP1::btnAgregarClick)
 	
-	EVT_TEXT(ID_TXTCOEFICIENTE2,wxPolinomioFrm::WxEdit1Updated1)
+	EVT_TEXT(ID_TXTCOEFICIENTE2,btnGradoP1::WxEdit1Updated1)
 	
-	EVT_TEXT(ID_TXTCOEFICIENTE,wxPolinomioFrm::txtCoeficienteUpdated)
+	EVT_TEXT(ID_TXTCOEFICIENTE,btnGradoP1::txtCoeficienteUpdated)
 	
-	EVT_TEXT(ID_TXTEXPONENTE,wxPolinomioFrm::txtExponenteUpdated)
-	EVT_BUTTON(ID_BTNAGREGAR,wxPolinomioFrm::btnAgregarClick1)
-	
-	EVT_TEXT(ID_TXTEXPONENTE2,wxPolinomioFrm::txtExponenteUpdated)
-	EVT_BUTTON(ID_BTNAGREGAR2,wxPolinomioFrm::btnAgregarClick2)
-	
-	EVT_TEXT(ID_TXTCOEFICIENTE2,wxPolinomioFrm::WxEdit1Updated1)
-	
-	EVT_TEXT(ID_TXTCOEFICIENTE,wxPolinomioFrm::txtCoeficienteUpdated)
-	
-	EVT_TEXT(ID_TXTEXPONENTE,wxPolinomioFrm::txtExponenteUpdated)
-	EVT_BUTTON(ID_BTNAGREGAR,wxPolinomioFrm::btnAgregarClick1)
+	EVT_TEXT(ID_TXTEXPONENTE,btnGradoP1::txtExponenteUpdated)
+	EVT_BUTTON(ID_BTNAGREGAR,btnGradoP1::btnAgregarClick)
 END_EVENT_TABLE()
 ////Event Table End
 
@@ -72,70 +71,70 @@ void wxPolinomioFrm::CreateGUIControls()
 	//Add the custom code before or after the blocks
 	////GUI Items Creation Start
 
-	btnDerivar02 = new wxButton(this, ID_BTNDERIVAR02, _("DerivarP2"), wxPoint(568, 324), wxSize(95, 36), 0, wxDefaultValidator, _("btnDerivar02"));
-	btnDerivar02->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	btnDerivar02 = new wxButton(this, ID_BTNDERIVAR02, _("DerivarP2"), wxPoint(770, 320), wxSize(127, 48), 0, wxDefaultValidator, _("btnDerivar02"));
+	btnDerivar02->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	btnGraficar = new wxButton(this, ID_BTNGRAFICAR, _("Graficar"), wxPoint(539, 115), wxSize(95, 36), 0, wxDefaultValidator, _("btnGraficar"));
-	btnGraficar->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	btnGraficar = new wxButton(this, ID_BTNGRAFICAR, _("Graficar"), wxPoint(740, 165), wxSize(126, 48), 0, wxDefaultValidator, _("btnGraficar"));
+	btnGraficar->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	btnGradoP1 = new wxButton(this, ID_BTNGRADOP1, _("GradoP1"), wxPoint(536, 26), wxSize(95, 36), 0, wxDefaultValidator, _("btnGradoP1"));
-	btnGradoP1->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	btnGradoP1 = new wxButton(this, ID_BTNGRADOP1, _("GradoP1"), wxPoint(740, 35), wxSize(126, 48), 0, wxDefaultValidator, _("btnGradoP1"));
+	btnGradoP1->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	btnGradoP2 = new wxButton(this, ID_BTNGRADOP2, _("GradoP2"), wxPoint(537, 64), wxSize(95, 36), 0, wxDefaultValidator, _("btnGradoP2"));
-	btnGradoP2->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	btnGradoP2 = new wxButton(this, ID_BTNGRADOP2, _("GradoP2"), wxPoint(740, 100), wxSize(127, 48), 0, wxDefaultValidator, _("btnGradoP2"));
+	btnGradoP2->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	btnBorrar = new wxButton(this, ID_BTNBORRAR, _("Borrar"), wxPoint(11, 324), wxSize(95, 36), 0, wxDefaultValidator, _("btnBorrar"));
-	btnBorrar->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	btnBorrar = new wxButton(this, ID_BTNBORRAR, _("Borrar"), wxPoint(25, 320), wxSize(126, 48), 0, wxDefaultValidator, _("btnBorrar"));
+	btnBorrar->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	btnMultiplica = new wxButton(this, ID_BTNMULTIPLICA, _("Multiplicar"), wxPoint(228, 324), wxSize(118, 36), 0, wxDefaultValidator, _("btnMultiplica"));
-	btnMultiplica->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	btnMultiplica = new wxButton(this, ID_BTNMULTIPLICA, _("Multiplicar"), wxPoint(315, 320), wxSize(157, 48), 0, wxDefaultValidator, _("btnMultiplica"));
+	btnMultiplica->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	btnSuma = new wxButton(this, ID_BTNSUMA, _("Sumar"), wxPoint(117, 323), wxSize(95, 36), 0, wxDefaultValidator, _("btnSuma"));
-	btnSuma->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	btnSuma = new wxButton(this, ID_BTNSUMA, _("Sumar"), wxPoint(170, 320), wxSize(127, 48), 0, wxDefaultValidator, _("btnSuma"));
+	btnSuma->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	btnDerivar01 = new wxButton(this, ID_BTNDERIVAR01, _("DerivarP1"), wxPoint(463, 323), wxSize(95, 36), 0, wxDefaultValidator, _("btnDerivar01"));
-	btnDerivar01->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	btnDerivar01 = new wxButton(this, ID_BTNDERIVAR01, _("DerivarP1"), wxPoint(630, 320), wxSize(127, 48), 0, wxDefaultValidator, _("btnDerivar01"));
+	btnDerivar01->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	btnResta = new wxButton(this, ID_BTNRESTA, _("Restar"), wxPoint(357, 325), wxSize(95, 36), 0, wxDefaultValidator, _("btnResta"));
-	btnResta->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	btnResta = new wxButton(this, ID_BTNRESTA, _("Restar"), wxPoint(485, 320), wxSize(127, 48), 0, wxDefaultValidator, _("btnResta"));
+	btnResta->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	lblPolinomio2 = new wxStaticText(this, ID_LBLPOLINOMIO2, _("P2: "), wxPoint(216, 60), wxDefaultSize, 0, _("lblPolinomio2"));
+	lblPolinomio2 = new wxStaticText(this, ID_LBLPOLINOMIO2, _("P2: "), wxPoint(290, 83), wxDefaultSize, 0, _("lblPolinomio2"));
 	lblPolinomio2->SetForegroundColour(wxColour(_("WHITE")));
 	lblPolinomio2->SetBackgroundColour(wxColour(_("BLACK")));
-	lblPolinomio2->SetFont(wxFont(18, wxSWISS, wxNORMAL, wxNORMAL, false));
+	lblPolinomio2->SetFont(wxFont(24, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	txtExponente2 = new wxTextCtrl(this, ID_TXTEXPONENTE2, _(""), wxPoint(82, 61), wxSize(41, 34), 0, wxDefaultValidator, _("txtExponente2"));
-	txtExponente2->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	txtExponente2 = new wxTextCtrl(this, ID_TXTEXPONENTE2, _(""), wxPoint(105, 82), wxSize(55, 46), 0, wxDefaultValidator, _("txtExponente2"));
+	txtExponente2->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	btnAgregar2 = new wxButton(this, ID_BTNAGREGAR2, _("&Agregar"), wxPoint(122, 60), wxSize(95, 36), 0, wxDefaultValidator, _("btnAgregar2"));
-	btnAgregar2->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	btnAgregar2 = new wxButton(this, ID_BTNAGREGAR2, _("&Agregar"), wxPoint(161, 80), wxSize(130, 50), 0, wxDefaultValidator, _("btnAgregar2"));
+	btnAgregar2->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	WxStaticText1 = new wxStaticText(this, ID_WXSTATICTEXT1, _("x^"), wxPoint(54, 62), wxDefaultSize, 0, _("WxStaticText1"));
-	WxStaticText1->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	WxStaticText1 = new wxStaticText(this, ID_WXSTATICTEXT1, _("x^"), wxPoint(73, 81), wxDefaultSize, 0, _("WxStaticText1"));
+	WxStaticText1->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	txtCoeficiente2 = new wxTextCtrl(this, ID_TXTCOEFICIENTE2, _(""), wxPoint(8, 64), wxSize(41, 34), 0, wxDefaultValidator, _("txtCoeficiente2"));
-	txtCoeficiente2->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	txtCoeficiente2 = new wxTextCtrl(this, ID_TXTCOEFICIENTE2, _(""), wxPoint(10, 79), wxSize(60, 45), 0, wxDefaultValidator, _("txtCoeficiente2"));
+	txtCoeficiente2->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	WxStaticText2 = new wxStaticText(this, ID_WXSTATICTEXT2, _("x^"), wxPoint(54, 19), wxDefaultSize, 0, _("WxStaticText2"));
-	WxStaticText2->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	WxStaticText2 = new wxStaticText(this, ID_WXSTATICTEXT2, _("x^"), wxPoint(73, 28), wxDefaultSize, 0, _("WxStaticText2"));
+	WxStaticText2->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	txtCoeficiente = new wxTextCtrl(this, ID_TXTCOEFICIENTE, _(""), wxPoint(8, 21), wxSize(45, 34), 0, wxDefaultValidator, _("txtCoeficiente"));
-	txtCoeficiente->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	txtCoeficiente = new wxTextCtrl(this, ID_TXTCOEFICIENTE, _(""), wxPoint(10, 28), wxSize(60, 45), 0, wxDefaultValidator, _("txtCoeficiente"));
+	txtCoeficiente->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	txtExponente = new wxTextCtrl(this, ID_TXTEXPONENTE, _(""), wxPoint(81, 21), wxSize(43, 35), 0, wxDefaultValidator, _("txtExponente"));
-	txtExponente->SetFont(wxFont(16, wxSWISS, wxNORMAL, wxNORMAL, false));
+	txtExponente = new wxTextCtrl(this, ID_TXTEXPONENTE, _(""), wxPoint(105, 28), wxSize(55, 46), 0, wxDefaultValidator, _("txtExponente"));
+	txtExponente->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	lblPolinomio1 = new wxStaticText(this, ID_LBLPOLINOMIO1, _("P1:"), wxPoint(215, 19), wxDefaultSize, 0, _("lblPolinomio1"));
+	lblPolinomio1 = new wxStaticText(this, ID_LBLPOLINOMIO1, _("P1:"), wxPoint(290, 28), wxDefaultSize, 0, _("lblPolinomio1"));
 	lblPolinomio1->SetForegroundColour(wxColour(_("WHITE")));
 	lblPolinomio1->SetBackgroundColour(wxColour(_("BLACK")));
-	lblPolinomio1->SetFont(wxFont(18, wxSWISS, wxNORMAL, wxNORMAL, false));
+	lblPolinomio1->SetFont(wxFont(24, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	btnAgregar = new wxButton(this, ID_BTNAGREGAR, _("&Agregar"), wxPoint(120, 19), wxSize(96, 38), 0, wxDefaultValidator, _("btnAgregar"));
-	btnAgregar->SetFont(wxFont(14, wxSWISS, wxNORMAL, wxNORMAL, false));
+	btnAgregar = new wxButton(this, ID_BTNAGREGAR, _("&Agregar"), wxPoint(161, 25), wxSize(130, 50), 0, wxDefaultValidator, _("btnAgregar"));
+	btnAgregar->SetFont(wxFont(19, wxSWISS, wxNORMAL, wxNORMAL, false));
 
 	SetTitle(_("wxPolinomio"));
 	SetIcon(wxNullIcon);
-	SetSize(8,8,717,434);
+	SetSize(8,8,951,427);
 	Center();
 	
 	////GUI Items Creation End
@@ -143,7 +142,6 @@ void wxPolinomioFrm::CreateGUIControls()
 
 void wxPolinomioFrm::OnClose(wxCloseEvent& event)
 {
-    
 	Destroy();
 }
 

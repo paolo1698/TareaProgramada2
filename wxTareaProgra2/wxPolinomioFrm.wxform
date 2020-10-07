@@ -4,8 +4,8 @@ object frmNewForm: TfrmNewForm
   AutoScroll = False
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'wxPolinomio'
-  ClientHeight = 395
-  ClientWidth = 701
+  ClientHeight = 388
+  ClientWidth = 935
   Color = clAppWorkSpace
   OldCreateOrder = True
   PopupMenu = DesignerPopup.Owner
@@ -31,16 +31,16 @@ object frmNewForm: TfrmNewForm
   Wx_BorderAlignment = []
   isAuimanagerAvailable = False
   PixelsPerInch = 96
-  TextHeight = 15
+  TextHeight = 20
   object btnAgregar: TWxButton
-    Left = 120
-    Top = 19
-    Width = 96
-    Height = 38
+    Left = 161
+    Top = 25
+    Width = 130
+    Height = 50
     Caption = '&Agregar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -25
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -77,15 +77,15 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object lblPolinomio1: TWxStaticText
-    Left = 215
-    Top = 19
-    Width = 35
-    Height = 36
+    Left = 290
+    Top = 28
+    Width = 50
+    Height = 45
     Caption = 'P1:'
     Color = clBlack
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
-    Font.Height = -24
+    Font.Height = -32
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentColor = False
@@ -120,16 +120,16 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object txtExponente: TWxEdit
-    Left = 81
-    Top = 21
-    Width = 43
-    Height = 35
+    Left = 105
+    Top = 28
+    Width = 55
+    Height = 46
     BevelInner = bvNone
     BevelOuter = bvNone
     AutoSize = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -163,16 +163,16 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object txtCoeficiente: TWxEdit
-    Left = 8
-    Top = 21
-    Width = 45
-    Height = 34
+    Left = 10
+    Top = 28
+    Width = 60
+    Height = 45
     BevelInner = bvNone
     BevelOuter = bvNone
     AutoSize = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -206,14 +206,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object WxStaticText2: TWxStaticText
-    Left = 54
-    Top = 19
-    Width = 28
-    Height = 34
+    Left = 73
+    Top = 28
+    Width = 35
+    Height = 42
     Caption = 'x^'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -245,16 +245,16 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object txtCoeficiente2: TWxEdit
-    Left = 8
-    Top = 64
-    Width = 41
-    Height = 34
+    Left = 10
+    Top = 79
+    Width = 60
+    Height = 45
     BevelInner = bvNone
     BevelOuter = bvNone
     AutoSize = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -288,14 +288,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object WxStaticText1: TWxStaticText
-    Left = 54
-    Top = 62
-    Width = 28
-    Height = 34
+    Left = 73
+    Top = 81
+    Width = 35
+    Height = 44
     Caption = 'x^'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -327,14 +327,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object btnAgregar2: TWxButton
-    Left = 122
-    Top = 60
-    Width = 95
-    Height = 36
+    Left = 161
+    Top = 80
+    Width = 130
+    Height = 50
     Caption = '&Agregar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -371,16 +371,16 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object txtExponente2: TWxEdit
-    Left = 82
-    Top = 61
-    Width = 41
-    Height = 34
+    Left = 105
+    Top = 82
+    Width = 55
+    Height = 46
     BevelInner = bvNone
     BevelOuter = bvNone
     AutoSize = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -414,15 +414,15 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object lblPolinomio2: TWxStaticText
-    Left = 216
-    Top = 60
-    Width = 42
-    Height = 36
+    Left = 290
+    Top = 83
+    Width = 50
+    Height = 45
     Caption = 'P2: '
     Color = clBlack
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
-    Font.Height = -24
+    Font.Height = -32
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentColor = False
@@ -457,14 +457,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object btnResta: TWxButton
-    Left = 357
-    Top = 325
-    Width = 95
-    Height = 36
+    Left = 485
+    Top = 320
+    Width = 127
+    Height = 48
     Caption = 'Restar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -501,14 +501,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object btnDerivar01: TWxButton
-    Left = 463
-    Top = 323
-    Width = 95
-    Height = 36
+    Left = 630
+    Top = 320
+    Width = 127
+    Height = 48
     Caption = 'DerivarP1'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -545,14 +545,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object btnSuma: TWxButton
-    Left = 117
-    Top = 323
-    Width = 95
-    Height = 36
+    Left = 170
+    Top = 320
+    Width = 127
+    Height = 48
     Caption = 'Sumar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -589,14 +589,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object btnMultiplica: TWxButton
-    Left = 228
-    Top = 324
-    Width = 118
-    Height = 36
+    Left = 315
+    Top = 320
+    Width = 157
+    Height = 48
     Caption = 'Multiplicar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -633,14 +633,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object btnBorrar: TWxButton
-    Left = 11
-    Top = 324
-    Width = 95
-    Height = 36
+    Left = 25
+    Top = 320
+    Width = 126
+    Height = 48
     Caption = 'Borrar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -677,14 +677,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object btnGradoP2: TWxButton
-    Left = 537
-    Top = 64
-    Width = 95
-    Height = 36
+    Left = 740
+    Top = 100
+    Width = 127
+    Height = 48
     Caption = 'GradoP2'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -721,14 +721,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object btnGradoP1: TWxButton
-    Left = 536
-    Top = 26
-    Width = 95
-    Height = 36
+    Left = 740
+    Top = 35
+    Width = 126
+    Height = 48
     Caption = 'GradoP1'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -765,14 +765,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object btnGraficar: TWxButton
-    Left = 539
-    Top = 115
-    Width = 95
-    Height = 36
+    Left = 740
+    Top = 165
+    Width = 126
+    Height = 48
     Caption = 'Graficar'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
@@ -809,14 +809,14 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object btnDerivar02: TWxButton
-    Left = 568
-    Top = 324
-    Width = 95
-    Height = 36
+    Left = 770
+    Top = 320
+    Width = 127
+    Height = 48
     Caption = 'DerivarP2'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
