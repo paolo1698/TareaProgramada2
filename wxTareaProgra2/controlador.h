@@ -7,16 +7,17 @@
 class Controlador {
     Polinomio *pA ;
     Polinomio *pB ;
+    Polinomio *pC ;
     wxPolinomioFrm* ventana ;
 public:
     Controlador(wxPolinomioFrmApp* a) ;
-    string sumarPolinomios();
-    string restarPolinomios();
-    string multiplicarPolinomios();
-    string dividirPolinomios();
+    void sumarPolinomios();
+    void restarPolinomios();
+    void multiplicarPolinomios();
+    void dividirPolinomios();
     int getGrado();
     void borrar();
-    string getDerivada();
+    void getDerivada();
     int evaluarLaFuncion();
 };
 
