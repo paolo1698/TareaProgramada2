@@ -1,0 +1,55 @@
+# Project: wxPolinomio
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 07/10/20 11:09
+
+WXLIBNAME = wxmsw29u
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = "windres.exe"
+OBJ       = Objects/MingW/wxPolinomioApp.o Objects/MingW/wxPolinomioFrm.o Objects/MingW/Polinomio.o Objects/MingW/lista.o Objects/MingW/controlador.o Objects/MingW/wxPolinomio_private.res
+LINKOBJ   = "Objects/MingW/wxPolinomioApp.o" "Objects/MingW/wxPolinomioFrm.o" "Objects/MingW/Polinomio.o" "Objects/MingW/lista.o" "Objects/MingW/controlador.o" Objects/MingW/wxPolinomio_private.res
+LIBS      = -L"C:/Users/Jorge Paolo/Desktop/Progra2/wxDevCppP7-64b/App/devcpp/lib/wx/gcc_lib" -L"C:/Users/Jorge Paolo/Desktop/Progra2/wxDevCppP7-64b/App/devcpp/lib" -L"C:/Users/Jorge Paolo/Desktop/Progra2/wxDevCppP7-64b/App/devcpp/MinGW32/lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxscintilla -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32  -g3 
+INCS      = -I"C:/Users/Jorge Paolo/Desktop/Progra2/wxDevCppP7-64b/App/devcpp/MinGW32/include"
+CXXINCS   = -I"C:/Users/Jorge Paolo/Desktop/Progra2/wxDevCppP7-64b/App/devcpp/MinGW32/include" -I"C:/Users/Jorge Paolo/Desktop/Progra2/wxDevCppP7-64b/App/devcpp/" -I"C:/Users/Jorge Paolo/Desktop/Progra2/wxDevCppP7-64b/App/devcpp/include/common" -I"C:/Users/Jorge Paolo/Desktop/Progra2/wxDevCppP7-64b/App/devcpp/include"
+RCINCS    = --include-dir "C:/Users/JORGEP~1/Desktop/Progra2/WXDEVC~1/App/devcpp/include/common"
+BIN       = Output/MingW/wxPolinomio.exe
+DEFINES   = -D__WXMSW__ -D__GNUWIN32__ -D_UNICODE
+CXXFLAGS  = $(CXXINCS) $(DEFINES) -std=gnu++0x   -g3
+CFLAGS    = $(INCS) $(DEFINES)   -g3
+GPROF     = gprof.exe
+ifeq ($(OS),Windows_NT)
+   RM = del /Q
+   FixPath = $(subst /,\,$1)
+else
+   RM = rm -f
+   FixPath = $1
+endif
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(call FixPath,$(LINKOBJ)) "$(call FixPath,$(BIN))"
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
+
+Objects/MingW/wxPolinomioApp.o: $(GLOBALDEPS) wxPolinomioApp.cpp wxPolinomioApp.h wxPolinomioFrm.h Polinomio.h Monomio.h lista.h nodoLista.h monomio.h controlador.h wxPolinomioFrm.h wxPolinomioApp.h polinomio.h
+	$(CPP) -c wxPolinomioApp.cpp -o Objects/MingW/wxPolinomioApp.o $(CXXFLAGS)
+
+Objects/MingW/wxPolinomioFrm.o: $(GLOBALDEPS) wxPolinomioFrm.cpp wxPolinomioFrm.h Polinomio.h Monomio.h lista.h nodoLista.h monomio.h
+	$(CPP) -c wxPolinomioFrm.cpp -o Objects/MingW/wxPolinomioFrm.o $(CXXFLAGS)
+
+Objects/MingW/Polinomio.o: $(GLOBALDEPS) Polinomio.cpp Polinomio.h Monomio.h lista.h nodoLista.h monomio.h
+	$(CPP) -c Polinomio.cpp -o Objects/MingW/Polinomio.o $(CXXFLAGS)
+
+Objects/MingW/lista.o: $(GLOBALDEPS) lista.cpp lista.h nodoLista.h monomio.h
+	$(CPP) -c lista.cpp -o Objects/MingW/lista.o $(CXXFLAGS)
+
+Objects/MingW/controlador.o: $(GLOBALDEPS) controlador.cpp controlador.h wxPolinomioFrm.h Polinomio.h Monomio.h lista.h nodoLista.h monomio.h wxPolinomioApp.h polinomio.h
+	$(CPP) -c controlador.cpp -o Objects/MingW/controlador.o $(CXXFLAGS)
+
+Objects/MingW/wxPolinomio_private.res: Objects/MingW/wxPolinomio_private.rc wxPolinomioApp.rc 
+	$(WINDRES) --input-format=rc -o Objects/MingW/wxPolinomio_private.res $(RCINCS) Objects/MingW/WXPOLI~1.RC -O coff
