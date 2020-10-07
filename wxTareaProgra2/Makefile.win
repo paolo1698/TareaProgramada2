@@ -1,7 +1,7 @@
 # Project: wxPolinomio
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 07/10/20 11:09
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 07/10/20 13:19
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
@@ -36,7 +36,7 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
 
-Objects/MingW/wxPolinomioApp.o: $(GLOBALDEPS) wxPolinomioApp.cpp wxPolinomioApp.h wxPolinomioFrm.h Polinomio.h Monomio.h lista.h nodoLista.h monomio.h controlador.h wxPolinomioFrm.h wxPolinomioApp.h polinomio.h
+Objects/MingW/wxPolinomioApp.o: $(GLOBALDEPS) wxPolinomioApp.cpp wxPolinomioApp.h controlador.h wxPolinomioFrm.h Polinomio.h Monomio.h lista.h nodoLista.h monomio.h wxPolinomioApp.h polinomio.h
 	$(CPP) -c wxPolinomioApp.cpp -o Objects/MingW/wxPolinomioApp.o $(CXXFLAGS)
 
 Objects/MingW/wxPolinomioFrm.o: $(GLOBALDEPS) wxPolinomioFrm.cpp wxPolinomioFrm.h Polinomio.h Monomio.h lista.h nodoLista.h monomio.h

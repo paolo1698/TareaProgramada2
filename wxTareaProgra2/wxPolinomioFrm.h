@@ -23,20 +23,24 @@
 #include <wx/stattext.h>
 #include <wx/button.h>
 ////Header Include End
+#include <wx/richtext/richtextctrl.h>
+#include <wx/stc/stc.h>
+
+
 
 ////Dialog Style Start
 #undef wxPolinomioFrm_STYLE
 #define wxPolinomioFrm_STYLE wxCAPTION | wxRESIZE_BORDER | wxSYSTEM_MENU | wxMINIMIZE_BOX | wxMAXIMIZE_BOX | wxCLOSE_BOX
 ////Dialog Style End
 
-class btnFradoP1 : public wxFrame
+class wxPolinomioFrm : public wxFrame
 {
 	private:
 		DECLARE_EVENT_TABLE();
 		
 	public:
 		wxPolinomioFrm(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("wxPolinomio"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxPolinomioFrm_STYLE);
-		virtual ~btnFradoP1();
+		virtual ~wxPolinomioFrm();
 		void WxButton1Click(wxCommandEvent& event);
 		void WxEdit1Updated(wxCommandEvent& event);
 		void btnAgregarClick1(wxCommandEvent& event);

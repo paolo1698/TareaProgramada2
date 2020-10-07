@@ -416,8 +416,8 @@ object frmNewForm: TfrmNewForm
   object lblPolinomio2: TWxStaticText
     Left = 216
     Top = 60
-    Width = 35
-    Height = 34
+    Width = 42
+    Height = 36
     Caption = 'P2: '
     Color = clBlack
     Font.Charset = DEFAULT_CHARSET

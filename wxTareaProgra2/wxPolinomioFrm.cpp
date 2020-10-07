@@ -23,35 +23,36 @@
 //Add Custom Events only in the appropriate block.
 //Code added in other places will be removed by wxDev-C++
 ////Event Table Start
-BEGIN_EVENT_TABLE(btnGradoP1,wxFrame)
+BEGIN_EVENT_TABLE(wxPolinomioFrm,wxFrame)
 	////Manual Code Start
 	////Manual Code End
 	
-	EVT_CLOSE(btnGradoP1::OnClose)
-	EVT_ACTIVATE(btnGradoP1::wxPolinomioFrmActivate)
-	EVT_BUTTON(ID_BTNDERIVAR02,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNGRAFICAR,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNGRADOP1,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNGRADOP2,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNBORRAR,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNMULTIPLICA,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNSUMA,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNDERIVAR01,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNRESTA,btnGradoP1::btnAgregarClick)
+	EVT_CLOSE(wxPolinomioFrm::OnClose)
+	EVT_ACTIVATE(wxPolinomioFrm::wxPolinomioFrmActivate)
 	
-	EVT_TEXT(ID_TXTEXPONENTE2,btnGradoP1::txtExponenteUpdated)
-	EVT_BUTTON(ID_BTNAGREGAR2,btnGradoP1::btnAgregarClick)
+	EVT_TEXT(ID_TXTEXPONENTE2,wxPolinomioFrm::txtExponenteUpdated)
+	EVT_BUTTON(ID_BTNAGREGAR2,wxPolinomioFrm::btnAgregarClick2)
 	
-	EVT_TEXT(ID_TXTCOEFICIENTE2,btnGradoP1::WxEdit1Updated1)
+	EVT_TEXT(ID_TXTCOEFICIENTE2,wxPolinomioFrm::WxEdit1Updated1)
 	
-	EVT_TEXT(ID_TXTCOEFICIENTE,btnGradoP1::txtCoeficienteUpdated)
+	EVT_TEXT(ID_TXTCOEFICIENTE,wxPolinomioFrm::txtCoeficienteUpdated)
 	
-	EVT_TEXT(ID_TXTEXPONENTE,btnGradoP1::txtExponenteUpdated)
-	EVT_BUTTON(ID_BTNAGREGAR,btnGradoP1::btnAgregarClick)
+	EVT_TEXT(ID_TXTEXPONENTE,wxPolinomioFrm::txtExponenteUpdated)
+	EVT_BUTTON(ID_BTNAGREGAR,wxPolinomioFrm::btnAgregarClick1)
+	
+	EVT_TEXT(ID_TXTEXPONENTE2,wxPolinomioFrm::txtExponenteUpdated)
+	EVT_BUTTON(ID_BTNAGREGAR2,wxPolinomioFrm::btnAgregarClick2)
+	
+	EVT_TEXT(ID_TXTCOEFICIENTE2,wxPolinomioFrm::WxEdit1Updated1)
+	
+	EVT_TEXT(ID_TXTCOEFICIENTE,wxPolinomioFrm::txtCoeficienteUpdated)
+	
+	EVT_TEXT(ID_TXTEXPONENTE,wxPolinomioFrm::txtExponenteUpdated)
+	EVT_BUTTON(ID_BTNAGREGAR,wxPolinomioFrm::btnAgregarClick1)
 END_EVENT_TABLE()
 ////Event Table End
 
-btnFradoP1::btnFradoP1(wxWindow *parent, wxWindowID id, const wxString &title, const wxPoint &position, const wxSize& size, long style)
+wxPolinomioFrm::wxPolinomioFrm(wxWindow *parent, wxWindowID id, const wxString &title, const wxPoint &position, const wxSize& size, long style)
 : wxFrame(parent, id, title, position, size, style)
 {
 	CreateGUIControls();
@@ -59,11 +60,11 @@ btnFradoP1::btnFradoP1(wxWindow *parent, wxWindowID id, const wxString &title, c
 	p2= new Polinomio();
 }
 
-wxPolinomioFrm::~btnFradoP1()
+wxPolinomioFrm::~wxPolinomioFrm()
 {
 }
 
-void btnFradoP1::CreateGUIControls()
+void wxPolinomioFrm::CreateGUIControls()
 {
 	//Do not add custom code between
 	//GUI Items Creation Start and GUI Items Creation End
@@ -140,7 +141,7 @@ void btnFradoP1::CreateGUIControls()
 	////GUI Items Creation End
 }
 
-void btnFradoP1::OnClose(wxCloseEvent& event)
+void wxPolinomioFrm::OnClose(wxCloseEvent& event)
 {
     
 	Destroy();
@@ -149,7 +150,7 @@ void btnFradoP1::OnClose(wxCloseEvent& event)
 /*
  * btnAgregarClick
  */
-void btnFradoP1::btnAgregarClick1(wxCommandEvent& event)
+void wxPolinomioFrm::btnAgregarClick1(wxCommandEvent& event)
 {
 	wxString hilera= txtCoeficiente->GetValue() ;
 	int coeficiente1= wxAtoi(hilera) ;
@@ -161,7 +162,7 @@ void btnFradoP1::btnAgregarClick1(wxCommandEvent& event)
 	//refrescar el label
 	mostrarPolinomio1() ;
 }
-void btnFradoP1::btnAgregarClick2(wxCommandEvent& event)
+void wxPolinomioFrm::btnAgregarClick2(wxCommandEvent& event)
 {
 	wxString hilera= txtCoeficiente2->GetValue() ;
 	int coeficiente2= wxAtoi(hilera) ;
@@ -174,7 +175,7 @@ void btnFradoP1::btnAgregarClick2(wxCommandEvent& event)
 	mostrarPolinomio2() ;
 }
 
-void btnFradoP1::mostrarPolinomio1(){  
+void wxPolinomioFrm::mostrarPolinomio1(){  
 	wxString hilera= "" ;
 	for (int i=0; i< p1->getExistentes() ; i++ ) {
         hilera << p1->getCoeficiente(i) ;
@@ -187,7 +188,7 @@ void btnFradoP1::mostrarPolinomio1(){
     hilera= this->GetTitle() + hilera ;
     this->SetTitle(hilera) ;*/
 }
-void btnFradoP1::mostrarPolinomio2(){  
+void wxPolinomioFrm::mostrarPolinomio2(){  
 	wxString hilera= "" ;
 	for (int i=0; i< p2->getExistentes() ; i++ ) {
         hilera << p2->getCoeficiente(i) ;
@@ -205,7 +206,7 @@ void btnFradoP1::mostrarPolinomio2(){
 /*
  * wxPolinomioFrmActivate
  */
-void btnFradoP1::wxPolinomioFrmActivate(wxActivateEvent& event)
+void wxPolinomioFrm::wxPolinomioFrmActivate(wxActivateEvent& event)
 {
 	// insert your code here
 }
@@ -213,7 +214,7 @@ void btnFradoP1::wxPolinomioFrmActivate(wxActivateEvent& event)
 /*
  * WxEdit1Updated0
  */
-void btnFradoP1::WxEdit1Updated0(wxCommandEvent& event)
+void wxPolinomioFrm::WxEdit1Updated0(wxCommandEvent& event)
 {
 	// insert your code here
 }
@@ -221,7 +222,7 @@ void btnFradoP1::WxEdit1Updated0(wxCommandEvent& event)
 /*
  * txtExponenteUpdated
  */
-void btnFradoP1::txtExponenteUpdated(wxCommandEvent& event)
+void wxPolinomioFrm::txtExponenteUpdated(wxCommandEvent& event)
 {
 	// insert your code here
 }
@@ -229,7 +230,7 @@ void btnFradoP1::txtExponenteUpdated(wxCommandEvent& event)
 /*
  * WxRichTextCtrl1BufferReset
  */
-void btnFradoP1::WxRichTextCtrl1BufferReset(wxRichTextEvent& event)
+void wxPolinomioFrm::WxRichTextCtrl1BufferReset(wxRichTextEvent& event)
 {
 	// insert your code here
 }
@@ -237,7 +238,7 @@ void btnFradoP1::WxRichTextCtrl1BufferReset(wxRichTextEvent& event)
 /*
  * txtCoeficienteUpdated
  */
-void btnFradoP1::txtCoeficienteUpdated(wxCommandEvent& event)
+void wxPolinomioFrm::txtCoeficienteUpdated(wxCommandEvent& event)
 {
 	// insert your code here
 }
@@ -245,7 +246,7 @@ void btnFradoP1::txtCoeficienteUpdated(wxCommandEvent& event)
 /*
  * WxEdit1Updated1
  */
-void btnFradoP1::WxEdit1Updated1(wxCommandEvent& event)
+void wxPolinomioFrm::WxEdit1Updated1(wxCommandEvent& event)
 {
 	// insert your code here
 }
@@ -253,7 +254,7 @@ void btnFradoP1::WxEdit1Updated1(wxCommandEvent& event)
 /*
  * WxStyledTextCtrl1AutoCompSelection
  */
-void btnFradoP1::WxStyledTextCtrl1AutoCompSelection(wxStyledTextEvent& event)
+void wxPolinomioFrm::WxStyledTextCtrl1AutoCompSelection(wxStyledTextEvent& event)
 {
 	// insert your code here
 }
@@ -261,7 +262,7 @@ void btnFradoP1::WxStyledTextCtrl1AutoCompSelection(wxStyledTextEvent& event)
 /*
  * WxStyledTextCtrl1AutoCompSelection0
  */
-void btnFradoP1::WxStyledTextCtrl1AutoCompSelection0(wxStyledTextEvent& event)
+void wxPolinomioFrm::WxStyledTextCtrl1AutoCompSelection0(wxStyledTextEvent& event)
 {
 	// insert your code here
 }
