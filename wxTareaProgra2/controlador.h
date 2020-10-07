@@ -10,7 +10,14 @@ class Controlador {
     wxPolinomioFrm* ventana ;
 public:
     Controlador(wxPolinomioFrmApp* a) ;
-    
+    string sumarPolinomios();
+    string restarPolinomios();
+    string multiplicarPolinomios();
+    string dividirPolinomios();
+    int getGrado();
+    void borrar();
+    string getDerivada();
+    int evaluarLaFuncion();
 };
 
 #endif
