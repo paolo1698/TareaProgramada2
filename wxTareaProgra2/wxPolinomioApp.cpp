@@ -8,7 +8,7 @@
 //---------------------------------------------------------------------------
 
 #include "wxPolinomioApp.h"
-//#include "wxPolinomioFrm.h"
+#include "wxPolinomioFrm.h"
 #include "controlador.h"
 
 

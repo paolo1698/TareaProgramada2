@@ -5,8 +5,8 @@ Order=0,1,2,3,4,5
 Open=1
 Top=0
 <<<<<<< HEAD
-CursorCol=1
-CursorRow=9
+CursorCol=17
+CursorRow=19
 =======
 CursorCol=1
 CursorRow=12
@@ -23,7 +23,7 @@ CursorRow=26
 CursorCol=15
 CursorRow=16
 >>>>>>> 7fe435a6f516765514480302150ba8478307dae0
-TopLine=4
+TopLine=6
 LeftChar=1
 [Editor_2]
 Open=1
@@ -35,16 +35,16 @@ LeftChar=1
 [Editor_3]
 Open=1
 Top=0
-CursorCol=4
-CursorRow=93
-TopLine=64
+CursorCol=3
+CursorRow=68
+TopLine=28
 LeftChar=1
 [Editor_4]
 Open=1
 Top=0
 CursorCol=1
-CursorRow=50
-TopLine=33
+CursorRow=26
+TopLine=47
 LeftChar=1
 [Editor_5]
 Open=1
@@ -85,13 +85,13 @@ TopLine=1
 LeftChar=1
 [Editor_13]
 <<<<<<< HEAD
-CursorCol=1
-CursorRow=101
-TopLine=22
+CursorCol=6
+CursorRow=12
+TopLine=1
 LeftChar=1
 [Editor_12]
-CursorCol=7
-CursorRow=11
+CursorCol=5
+CursorRow=12
 =======
 CursorCol=1
 CursorRow=91

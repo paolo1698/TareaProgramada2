@@ -8,7 +8,8 @@ class Controlador {
     Polinomio *pA ;
     Polinomio *pB ;
     Polinomio *pC ;
-    //wxPolinomioFrm* ventana ;
+    wxPolinomioFrm* ventana ;
+    
 public:
     Controlador(wxPolinomioFrmApp* a) ;
     void sumarPolinomios();

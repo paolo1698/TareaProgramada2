@@ -79,8 +79,8 @@ object frmNewForm: TfrmNewForm
   object lblPolinomio1: TWxStaticText
     Left = 290
     Top = 28
-    Width = 50
-    Height = 45
+    Width = 55
+    Height = 49
     Caption = 'P1:'
     Color = clBlack
     Font.Charset = DEFAULT_CHARSET
@@ -208,7 +208,7 @@ object frmNewForm: TfrmNewForm
   object WxStaticText2: TWxStaticText
     Left = 73
     Top = 28
-    Width = 35
+    Width = 36
     Height = 42
     Caption = 'x^'
     Font.Charset = DEFAULT_CHARSET
@@ -290,8 +290,8 @@ object frmNewForm: TfrmNewForm
   object WxStaticText1: TWxStaticText
     Left = 73
     Top = 81
-    Width = 35
-    Height = 44
+    Width = 36
+    Height = 42
     Caption = 'x^'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -416,8 +416,8 @@ object frmNewForm: TfrmNewForm
   object lblPolinomio2: TWxStaticText
     Left = 290
     Top = 83
-    Width = 50
-    Height = 45
+    Width = 55
+    Height = 49
     Caption = 'P2: '
     Color = clBlack
     Font.Charset = DEFAULT_CHARSET
