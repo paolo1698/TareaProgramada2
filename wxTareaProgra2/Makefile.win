@@ -1,7 +1,11 @@
 # Project: wxPolinomio
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
+<<<<<<< Updated upstream
 # Makefile created by wxDev-C++ IDE 7.4.2.569 on 07/10/20 13:46
+=======
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 09/10/20 14:18
+>>>>>>> Stashed changes
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
