@@ -9,7 +9,7 @@
 ///------------------------------------------------------------------
 
 #include "wxPolinomioFrm.h"
-
+#include "controlador.h"
 
 //Do not add custom headers between
 //Header Include Start and Header Include End
@@ -23,31 +23,31 @@
 //Add Custom Events only in the appropriate block.
 //Code added in other places will be removed by wxDev-C++
 ////Event Table Start
-BEGIN_EVENT_TABLE(btnGradoP1,wxFrame)
+BEGIN_EVENT_TABLE(wxPolinomioFrm,wxFrame)
 	////Manual Code Start
 	////Manual Code End
 	
-	EVT_CLOSE(btnGradoP1::OnClose)
-	EVT_ACTIVATE(btnGradoP1::wxPolinomioFrmActivate)
-	EVT_BUTTON(ID_BTNDERIVAR02,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNGRAFICAR,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNGRADOP1,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNGRADOP2,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNBORRAR,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNMULTIPLICA,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNSUMA,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNDERIVAR01,btnGradoP1::btnAgregarClick)
-	EVT_BUTTON(ID_BTNRESTA,btnGradoP1::btnAgregarClick)
+	EVT_CLOSE(wxPolinomioFrm::OnClose)
+	EVT_ACTIVATE(wxPolinomioFrm::wxPolinomioFrmActivate)
+	EVT_BUTTON(ID_BTNDERIVAR02,wxPolinomioFrm::btnAgregarClick1)
+	EVT_BUTTON(ID_BTNGRAFICAR,wxPolinomioFrm::btnAgregarClick1)
+	EVT_BUTTON(ID_BTNGRADOP1,wxPolinomioFrm::btnAgregarClick1)
+	EVT_BUTTON(ID_BTNGRADOP2,wxPolinomioFrm::btnAgregarClick1)
+	EVT_BUTTON(ID_BTNBORRAR,wxPolinomioFrm::btnAgregarClick1)
+	EVT_BUTTON(ID_BTNMULTIPLICA,wxPolinomioFrm::btnAgregarClick1)
+	EVT_BUTTON(ID_BTNSUMA,Controlador::sumePolinomio(p1, p2))
+	EVT_BUTTON(ID_BTNDERIVAR01,wxPolinomioFrm::btnAgregarClick1)
+	EVT_BUTTON(ID_BTNRESTA,wxPolinomioFrm::btnAgregarClick1)
 	
-	EVT_TEXT(ID_TXTEXPONENTE2,btnGradoP1::txtExponenteUpdated)
-	EVT_BUTTON(ID_BTNAGREGAR2,btnGradoP1::btnAgregarClick)
+	EVT_TEXT(ID_TXTEXPONENTE2,wxPolinomioFrm::txtExponenteUpdated)
+	EVT_BUTTON(ID_BTNAGREGAR2,wxPolinomioFrm::btnAgregarClick2)
 	
-	EVT_TEXT(ID_TXTCOEFICIENTE2,btnGradoP1::WxEdit1Updated1)
+	EVT_TEXT(ID_TXTCOEFICIENTE2,wxPolinomioFrm::WxEdit1Updated1)
 	
-	EVT_TEXT(ID_TXTCOEFICIENTE,btnGradoP1::txtCoeficienteUpdated)
+	EVT_TEXT(ID_TXTCOEFICIENTE,wxPolinomioFrm::txtCoeficienteUpdated)
 	
-	EVT_TEXT(ID_TXTEXPONENTE,btnGradoP1::txtExponenteUpdated)
-	EVT_BUTTON(ID_BTNAGREGAR,btnGradoP1::btnAgregarClick)
+	EVT_TEXT(ID_TXTEXPONENTE,wxPolinomioFrm::txtExponenteUpdated)
+	EVT_BUTTON(ID_BTNAGREGAR,wxPolinomioFrm::btnAgregarClick1)
 END_EVENT_TABLE()
 ////Event Table End
 
@@ -178,26 +178,20 @@ void wxPolinomioFrm::mostrarPolinomio1(){
 	for (int i=0; i< p1->getExistentes() ; i++ ) {
         hilera << p1->getCoeficiente(i) ;
     	hilera+= "x^" ;
-	    hilera << p1->getExponente(i) ;
+	    hilera << p1->getExponente(i);
         hilera+= " + " ;
     }
-    lblPolinomio1->SetLabel(hilera) ;   
-    /*hilera << p->getLongitud() ;
-    hilera= this->GetTitle() + hilera ;
-    this->SetTitle(hilera) ;*/
+    lblPolinomio1->SetLabel(hilera);
 }
 void wxPolinomioFrm::mostrarPolinomio2(){  
-	wxString hilera= "" ;
-	for (int i=0; i< p2->getExistentes() ; i++ ) {
-        hilera << p2->getCoeficiente(i) ;
+	wxString hilera= "";
+	for (int i=0; i< p2->getExistentes(); i++ ) {
+        hilera << p2->getCoeficiente(i);
     	hilera+= "x^" ;
-	    hilera << p2->getExponente(i) ;
+	    hilera << p2->getExponente(i);
         hilera+= " + " ;
     }
-    lblPolinomio2->SetLabel(hilera) ; 
-    /*hilera << p->getLongitud() ;
-    hilera= this->GetTitle() + hilera ;
-    this->SetTitle(hilera) ;*/
+    lblPolinomio2->SetLabel(hilera);
 }
 
 

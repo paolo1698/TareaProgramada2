@@ -1,11 +1,7 @@
 # Project: wxPolinomio
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-<<<<<<< Updated upstream
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 07/10/20 13:46
-=======
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 09/10/20 14:18
->>>>>>> Stashed changes
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 12/10/20 14:09
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
@@ -40,10 +36,10 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
 
-Objects/MingW/wxPolinomioApp.o: $(GLOBALDEPS) wxPolinomioApp.cpp wxPolinomioApp.h controlador.h wxPolinomioFrm.h Polinomio.h Monomio.h lista.h nodoLista.h monomio.h wxPolinomioApp.h polinomio.h
+Objects/MingW/wxPolinomioApp.o: $(GLOBALDEPS) wxPolinomioApp.cpp wxPolinomioApp.h wxPolinomioFrm.h Polinomio.h Monomio.h lista.h nodoLista.h monomio.h controlador.h wxPolinomioFrm.h wxPolinomioApp.h polinomio.h
 	$(CPP) -c wxPolinomioApp.cpp -o Objects/MingW/wxPolinomioApp.o $(CXXFLAGS)
 
-Objects/MingW/wxPolinomioFrm.o: $(GLOBALDEPS) wxPolinomioFrm.cpp wxPolinomioFrm.h Polinomio.h Monomio.h lista.h nodoLista.h monomio.h
+Objects/MingW/wxPolinomioFrm.o: $(GLOBALDEPS) wxPolinomioFrm.cpp wxPolinomioFrm.h Polinomio.h Monomio.h lista.h nodoLista.h monomio.h controlador.h wxPolinomioFrm.h wxPolinomioApp.h polinomio.h
 	$(CPP) -c wxPolinomioFrm.cpp -o Objects/MingW/wxPolinomioFrm.o $(CXXFLAGS)
 
 Objects/MingW/Polinomio.o: $(GLOBALDEPS) Polinomio.cpp Polinomio.h Monomio.h lista.h nodoLista.h monomio.h

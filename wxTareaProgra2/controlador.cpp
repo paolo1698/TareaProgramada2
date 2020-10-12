@@ -2,31 +2,18 @@
 
 
 Controlador::Controlador(wxPolinomioFrmApp* a) {
-    pA= new Polinomio() ;
-    pB= new Polinomio() ;
-    pC= new Polinomio() ;
+    pA= new Polinomio();
+    pB= new Polinomio();
+    pC= new Polinomio();
     
     ventana = new wxPolinomioFrm(NULL);
     a->SetTopWindow(ventana);
     ventana->Show();
-<<<<<<< Updated upstream
     }
-    
-    void setSumaPolinomios(Polinomio pA,Polinomio pB){
-        
-        }
-        
-    void getSumaPolinomios(){
-        
-        }
 
-
-    void sumarPolinomios(){
-        /*int sumador[8];
-=======
-}   
-    void Controlador::setSumaPolinomios(Polinomio pA,Polinomio pB){
+    void Controlador::sumePolinomio(Polinomio pA,Polinomio pB){
        int grado=0;
+       
       if(pA.grado()<pB.grado()){
              grado=pB.grado();
          } else if(pA.grado()>pB.grado()){
@@ -34,30 +21,26 @@ Controlador::Controlador(wxPolinomioFrmApp* a) {
          } else if(pA.grado()==pB.grado()){
               grado=pA.grado(); 
          }
+         
        for(int i=0;i<grado;i++){
             if(pA.getExponente(i)==pB.getExponente(i)){
             int exponentePc=pA.getExponente(i);
-             int coefcientepC=pA.getCoeficiente(i)+pB.getCoeficiente(i);
-             pC->agregarMonomio(coefcientepC,exponentePc);
+             int coeficientepC=pA.getCoeficiente(i)+pB.getCoeficiente(i);
+             pC->agregarMonomio(coeficientepC,exponentePc);
              }else if(pA.grado()<pB.grado() && i==pA.grado()){
                   int exponentePc=pB.getExponente(i);
-                  int coefcientepC=pB.getCoeficiente(i);
-                  pC->agregarMonomio(coefcientepC,exponentePc);
+                  int coeficientepC=pB.getCoeficiente(i);
+                  pC->agregarMonomio(coeficientepC,exponentePc);
              }else if(pA.grado()>pB.grado() && i==pB.grado()){
                   int exponentePc=pA.getExponente(i);
-                  int coefcientepC=pA.getCoeficiente(i);
-                  pC->agregarMonomio(coefcientepC,exponentePc);          
+                  int coeficientepC=pA.getCoeficiente(i);
+                  pC->agregarMonomio(coeficientepC,exponentePc);          
              }    
       }
     }
-        
-    int Controlador::getSumaPolinomios( ){
-            
-        return 0;
-        }
+    
     /*void sumarPolinomios(){
         int sumador[8];
->>>>>>> Stashed changes
         Nodo *n= cabeza;
         while(n != nullptr){
             n = n -> getSiguiente();
@@ -99,36 +82,18 @@ Controlador::Controlador(wxPolinomioFrmApp* a) {
             default;
             break;
             }//cierre switch
-<<<<<<< Updated upstream
         }//cierre while
-        
-        
-=======
         }
->>>>>>> Stashed changes
         
          
     }*///cierre función
         
-    void Controlador::setRestaPolinomios(){
+    void Controlador::restePolinomio(){
        
     }
-    int Controlador::getRestaPolinomios(){
-       return 0;
-    }
         
-    void Controlador::setMultiplicaPolinomios(Polinomio pA,Polinomio pB){
+    void Controlador::multipliquePolinomio(Polinomio pA,Polinomio pB){
             
-    }
-    int Controlador::getMultiplicaPolinomios(){
-       return 0;
-    }
-        
-    void Controlador::setDividePolinomios(){
-        
-    }
-    int Controlador::getDividePolinomios(){
-       return 0;
     }
     
     
@@ -136,19 +101,14 @@ Controlador::Controlador(wxPolinomioFrmApp* a) {
         return 1;
     }
         
-    void Controlador::borrar(){
+    void Controlador::borre(){
         
     }
     
-    void Controlador::getDerivada(){
+    void Controlador::derive(){
          
     }
         
-    int Controlador::evaluarLaFuncion(){
+    int Controlador::evalueFuncion(){
         return 1;
     }
-<<<<<<< Updated upstream
-=======
-
-
->>>>>>> Stashed changes

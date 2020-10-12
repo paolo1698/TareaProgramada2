@@ -9,24 +9,16 @@ class Controlador {
     Polinomio *pB ;
     Polinomio *pC ;
     wxPolinomioFrm* ventana ;
-<<<<<<< Updated upstream
     
-=======
->>>>>>> Stashed changes
 public:
     Controlador(wxPolinomioFrmApp* a) ;
-    void setSumaPolinomios(Polinomio pA,Polinomio pB);
-    int getSumaPolinomios();
-    void setRestaPolinomios();
-    int getRestaPolinomios();
-    void setMultiplicaPolinomios();
-    int getMultiplicaPolinomios();
-    void setDividePolinomios();
-    int getDividePolinomios();
+    void sumePolinomio(Polinomio pA,Polinomio pB);
+    void restePolinomio();
+    void multipliquePolinomio(Polinomio pA,Polinomio pB);
     int getGrado();
-    void borrar();
-    void getDerivada();
-    int evaluarLaFuncion();
+    void borre();
+    void derive();
+    int evalueFuncion();
 };
 
 #endif
