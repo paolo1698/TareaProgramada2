@@ -13,14 +13,6 @@ void Polinomio::eliminarMonomio(int c, int e) {
     monomios->eliminar(new Monomio(c,e)) ;
 }
 
-int Polinomio::f(int x) {
-    //si su primer nombre empieza con una letra menor a K
-}
-
-Polinomio Polinomio::derivada() {
-    //si no
-}
-
 int Polinomio::getCoeficiente (int indice) {
     int c=-999 ;
     if (monomios!= nullptr) {

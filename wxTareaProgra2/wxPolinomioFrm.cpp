@@ -35,7 +35,7 @@ BEGIN_EVENT_TABLE(wxPolinomioFrm,wxFrame)
 	EVT_BUTTON(ID_BTNGRADOP2,wxPolinomioFrm::btnAgregarClick1)
 	EVT_BUTTON(ID_BTNBORRAR,wxPolinomioFrm::btnAgregarClick1)
 	EVT_BUTTON(ID_BTNMULTIPLICA,wxPolinomioFrm::btnAgregarClick1)
-	EVT_BUTTON(ID_BTNSUMA,Controlador::sumePolinomio(p1, p2))
+	EVT_BUTTON(ID_BTNSUMA,wxPolinomioFrm::btnSumar)
 	EVT_BUTTON(ID_BTNDERIVAR01,wxPolinomioFrm::btnAgregarClick1)
 	EVT_BUTTON(ID_BTNRESTA,wxPolinomioFrm::btnAgregarClick1)
 	
@@ -51,12 +51,14 @@ BEGIN_EVENT_TABLE(wxPolinomioFrm,wxFrame)
 END_EVENT_TABLE()
 ////Event Table End
 
-wxPolinomioFrm::wxPolinomioFrm(wxWindow *parent, wxWindowID id, const wxString &title, const wxPoint &position, const wxSize& size, long style)
-: wxFrame(parent, id, title, position, size, style)
+wxPolinomioFrm::wxPolinomioFrm(Controlador *c, wxWindowID id, const wxString &title, const wxPoint &position, const wxSize& size, long style)
+: wxFrame(nullptr, id, title, position, size, style)
 {
 	CreateGUIControls();
-	p1= new Polinomio() ;
+	p1= new Polinomio();
 	p2= new Polinomio();
+	p3= new Polinomio();
+	Controlador *controlador;
 }
 
 wxPolinomioFrm::~wxPolinomioFrm()
@@ -70,6 +72,11 @@ void wxPolinomioFrm::CreateGUIControls()
 	//wxDev-C++ designer will remove them.
 	//Add the custom code before or after the blocks
 	////GUI Items Creation Start
+
+	WxStaticText3 = new wxStaticText(this, ID_WXSTATICTEXT3, _("Resultado: "), wxPoint(71, 184), wxDefaultSize, 0, _("WxStaticText3"));
+	WxStaticText3->SetForegroundColour(wxColour(_("WHITE")));
+	WxStaticText3->SetBackgroundColour(wxColour(_("BLACK")));
+	WxStaticText3->SetFont(wxFont(24, wxSWISS, wxNORMAL, wxNORMAL, false));
 
 	btnDerivar02 = new wxButton(this, ID_BTNDERIVAR02, _("DerivarP2"), wxPoint(770, 320), wxSize(127, 48), 0, wxDefaultValidator, _("btnDerivar02"));
 	btnDerivar02->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
@@ -98,7 +105,7 @@ void wxPolinomioFrm::CreateGUIControls()
 	btnResta = new wxButton(this, ID_BTNRESTA, _("Restar"), wxPoint(485, 320), wxSize(127, 48), 0, wxDefaultValidator, _("btnResta"));
 	btnResta->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	lblPolinomio2 = new wxStaticText(this, ID_LBLPOLINOMIO2, _("P2: "), wxPoint(290, 83), wxDefaultSize, 0, _("lblPolinomio2"));
+	lblPolinomio2 = new wxStaticText(this, ID_LBLPOLINOMIO2, _("P2: "), wxPoint(294, 84), wxDefaultSize, 0, _("lblPolinomio2"));
 	lblPolinomio2->SetForegroundColour(wxColour(_("WHITE")));
 	lblPolinomio2->SetBackgroundColour(wxColour(_("BLACK")));
 	lblPolinomio2->SetFont(wxFont(24, wxSWISS, wxNORMAL, wxNORMAL, false));
@@ -115,7 +122,7 @@ void wxPolinomioFrm::CreateGUIControls()
 	txtCoeficiente2 = new wxTextCtrl(this, ID_TXTCOEFICIENTE2, _(""), wxPoint(10, 79), wxSize(60, 45), 0, wxDefaultValidator, _("txtCoeficiente2"));
 	txtCoeficiente2->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	WxStaticText2 = new wxStaticText(this, ID_WXSTATICTEXT2, _("x^"), wxPoint(73, 28), wxDefaultSize, 0, _("WxStaticText2"));
+	WxStaticText2 = new wxStaticText(this, ID_WXSTATICTEXT2, _("x^"), wxPoint(69, 28), wxDefaultSize, 0, _("WxStaticText2"));
 	WxStaticText2->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
 	txtCoeficiente = new wxTextCtrl(this, ID_TXTCOEFICIENTE, _(""), wxPoint(10, 28), wxSize(60, 45), 0, wxDefaultValidator, _("txtCoeficiente"));
@@ -124,7 +131,7 @@ void wxPolinomioFrm::CreateGUIControls()
 	txtExponente = new wxTextCtrl(this, ID_TXTEXPONENTE, _(""), wxPoint(105, 28), wxSize(55, 46), 0, wxDefaultValidator, _("txtExponente"));
 	txtExponente->SetFont(wxFont(21, wxSWISS, wxNORMAL, wxNORMAL, false));
 
-	lblPolinomio1 = new wxStaticText(this, ID_LBLPOLINOMIO1, _("P1:"), wxPoint(290, 28), wxDefaultSize, 0, _("lblPolinomio1"));
+	lblPolinomio1 = new wxStaticText(this, ID_LBLPOLINOMIO1, _("P1:"), wxPoint(290, 25), wxDefaultSize, 0, _("lblPolinomio1"));
 	lblPolinomio1->SetForegroundColour(wxColour(_("WHITE")));
 	lblPolinomio1->SetBackgroundColour(wxColour(_("BLACK")));
 	lblPolinomio1->SetFont(wxFont(24, wxSWISS, wxNORMAL, wxNORMAL, false));
@@ -160,11 +167,18 @@ void wxPolinomioFrm::btnAgregarClick1(wxCommandEvent& event)
 	//refrescar el label
 	mostrarPolinomio1() ;
 }
+
+void wxPolinomioFrm::btnSumar(wxCommandEvent& event){
+    p3->agregarMonomio(0,0);
+    controlador->sumePolinomio(*p1,*p2,*p3);
+    mostrarPolinomio3() ;
+    }
+
 void wxPolinomioFrm::btnAgregarClick2(wxCommandEvent& event)
 {
 	wxString hilera= txtCoeficiente2->GetValue() ;
 	int coeficiente2= wxAtoi(hilera) ;
-	hilera= txtExponente->GetValue() ;
+	hilera= txtExponente2->GetValue() ;
 	int exponente2= wxAtoi(hilera) ;
 	
 	//agregar monomio al polinomio
@@ -192,6 +206,17 @@ void wxPolinomioFrm::mostrarPolinomio2(){
         hilera+= " + " ;
     }
     lblPolinomio2->SetLabel(hilera);
+}
+
+void wxPolinomioFrm::mostrarPolinomio3(){  
+	wxString hilera= "Resultado: ";
+	for (int i=0; i< p3->getExistentes(); i++ ) {
+        hilera << p3-> getCoeficiente(i);
+    	hilera+= "x^" ;
+	    hilera << p3->getExponente(i);
+        hilera+= " + " ;
+    }
+    WxStaticText3->SetLabel(hilera);
 }
 
 

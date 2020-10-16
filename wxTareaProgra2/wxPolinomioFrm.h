@@ -33,22 +33,27 @@
 #define wxPolinomioFrm_STYLE wxCAPTION | wxRESIZE_BORDER | wxSYSTEM_MENU | wxMINIMIZE_BOX | wxMAXIMIZE_BOX | wxCLOSE_BOX
 ////Dialog Style End
 
+class Controlador; 
 class wxPolinomioFrm : public wxFrame
 {
 	private:
 		DECLARE_EVENT_TABLE();
+		Controlador *controlador;
 		
 	public:
-		wxPolinomioFrm(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("wxPolinomio"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxPolinomioFrm_STYLE);
+		wxPolinomioFrm(Controlador *c, wxWindowID id = 1, const wxString &title = wxT("wxPolinomio"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxPolinomioFrm_STYLE);
 		virtual ~wxPolinomioFrm();
 		void WxButton1Click(wxCommandEvent& event);
 		void WxEdit1Updated(wxCommandEvent& event);
 		void btnAgregarClick1(wxCommandEvent& event);
 		void btnAgregarClick2(wxCommandEvent& event);
+		void btnSumar(wxCommandEvent& event);
 		Polinomio *p1;
 		Polinomio *p2;
-		void mostrarPolinomio1() ;
-		void mostrarPolinomio2() ;
+		Polinomio *p3;
+		void mostrarPolinomio1();
+		void mostrarPolinomio2();
+		void mostrarPolinomio3();
 		void wxPolinomioFrmActivate(wxActivateEvent& event);
 		void WxEdit1Updated0(wxCommandEvent& event);
 		void txtExponenteUpdated(wxCommandEvent& event);
@@ -63,6 +68,7 @@ class wxPolinomioFrm : public wxFrame
 		//GUI Control Declaration Start and GUI Control Declaration End.
 		//wxDev-C++ will remove them. Add custom code after the block.
 		////GUI Control Declaration Start
+		wxStaticText *WxStaticText3;
 		wxButton *btnDerivar02;
 		wxButton *btnGraficar;
 		wxButton *btnGradoP1;
@@ -92,6 +98,7 @@ class wxPolinomioFrm : public wxFrame
 		enum
 		{
 			////GUI Enum Control ID Start
+			ID_WXSTATICTEXT3 = 1028,
 			ID_BTNDERIVAR02 = 1027,
 			ID_BTNGRAFICAR = 1026,
 			ID_BTNGRADOP1 = 1025,

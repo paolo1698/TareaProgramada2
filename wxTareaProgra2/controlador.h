@@ -4,6 +4,7 @@
 #include "wxPolinomioApp.h"
 #include "polinomio.h"
 
+class wxPolinomioFrm;
 class Controlador {
     Polinomio *pA ;
     Polinomio *pB ;
@@ -12,9 +13,9 @@ class Controlador {
     
 public:
     Controlador(wxPolinomioFrmApp* a) ;
-    void sumePolinomio(Polinomio pA,Polinomio pB);
-    void restePolinomio();
-    void multipliquePolinomio(Polinomio pA,Polinomio pB);
+    void sumePolinomio(Polinomio p1, Polinomio p2, Polinomio p3);
+    void restePolinomio(Polinomio p1, Polinomio p2);
+    void multipliquePolinomio(Polinomio p1,Polinomio p2);
     int getGrado();
     void borre();
     void derive();

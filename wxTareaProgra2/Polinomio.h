@@ -12,10 +12,9 @@ public:
     int grado() ;
     void agregarMonomio(int c, int e) ;
     void eliminarMonomio(int c, int e) ;
-    int f(int x) ;
-    int getExistentes() { return monomios->longitud() ; } 
+    int getExistentes() { return monomios->longitud(); } ; 
     int getCoeficiente(int indice) ;
     int getExponente(int indice) ;
-    Polinomio derivada() ;
 };
 #endif
+
